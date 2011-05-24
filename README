@@ -1,15 +1,14 @@
 HTML-EntityReference
 
-The README is used to introduce the module and provide instructions on
-how to install the module, any machine dependencies it may have (for
-example C compilers and installed libraries) and any other information
-that should be provided before the module is installed.
+This is a listing of HTML character entities.  It is intended to be the last time such a list is compiled into a module, being meant to be exposed and usable in any situation.  I found several modules that dealt with Entities, but did not do what I needed, or were for internal use.
 
-A README file is required for CPAN modules since CPAN extracts the README
-file from a module distribution so that people browsing the archive
-can use it to get an idea of the module's uses. It is usually a good idea
-to provide version information here so that people can decide whether
-fixes for the module are worth downloading.
+The essential characteristic of this data is that "entities exist".
+
+The entity is nothing more than a name for a Unicode character. Everything else having to do with it is attached to the character, and should be something I can find in the Unicode database and related Unicode Perl stuff.  The most fundamental thing is a map of names to code point numbers. I mean the number itself (an integer), not some string representation of the number in hex or decimal or decorated with some other escape system.  From the code point value, it is a single step to get the actual character, or the formatted numeric entity, or whatever.
+
+You can use the supplied hash directly.  Or, this module provides some simple functions that abstract the way the data is actually stored and return the common cases.
+
+The function calls also provide for an easy way to check multiple tables in one go.  So non-standard entities recognised by some browsers or historically are documented here also.
 
 
 INSTALLATION

@@ -17,9 +17,9 @@ name: HTML-EntityReference
 provides:
   HTML::EntityReference:
     file: lib/HTML/EntityReference.pm
-    version: 0.010
+    version: 0.011
 requires:
-  perl: 5.006
+  perl: 5.010001
 resources:
   license: http://dev.perl.org/licenses/
-version: 0.010
+version: 0.011

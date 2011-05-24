@@ -13,10 +13,10 @@ my $builder = Module::Build->new(
         'Test::Fatal' => 0.005,
     },
     requires => {
-        'perl' => 5.006,
+        'perl' => 5.010001,
     },
     add_to_cleanup      => [ 'HTML-EntityReference-*' ],
     create_makefile_pl => 'traditional',
 );
-$builder->add_build_element('pl');  ###
+$builder->add_build_element('inc');  ###
 $builder->create_build_script();

@@ -11,17 +11,17 @@ HTML::EntityReference - A minimal, abstract, and reusable list of HTML entities
 
 =head1 VERSION
 
-Version 0.010
+Version 0.011
 
 =cut
 
-our $VERSION = '0.010';
+our $VERSION = '0.011';
 
 =head1 SYNOPSIS
 
 This is a listing of HTML character entities.  It is intended to be the last time such a list is compiled into a module, being meant to be exposed and usable in any situation.  I found several modules that dealt with Entities, but did not do what I needed, or were for internal use.
 
-The essential characteristic is that "entities exist".
+The essential characteristic of this data is that "entities exist".
 
 The entity is nothing more than a name for a Unicode character. Everything else having to do with it is attached to the character, and should be something I can find in the Unicode database and related Unicode Perl stuff.  The most fundamental thing is a map of names to code point numbers. I mean the number itself (an integer), not some string representation of the number in hex or decimal or decorated with some other escape system.  From the code point value, it is a single step to get the actual character, or the formatted numeric entity, or whatever.
 
@@ -372,7 +372,7 @@ In addition to adding your own custom entities, you can also duplicate existing 
 
 my %arg_map= (
     HTML4 => \%W3C_Entities,
-    HTML5_draft => [ \%HTML5_draft,  "HTML/Entity-HTML5_draft.inc.pl" ],
+    HTML5_draft => [ \%HTML5_draft,  "HTML/Entity-HTML5_draft.pl.inc" ],
     ':all' => [qw/ HTML4 HTML5_draft /]
     );
 
@@ -582,7 +582,7 @@ return 1;  # module loaded OK.
 
 =head1 AUTHOR
 
-John M. Dlugosz, C<< <john at dlugosz.com> >>
+John M. Dlugosz, C<< <dlugosz AT cpan DOT com> >>
 
 =head1 BUGS
 

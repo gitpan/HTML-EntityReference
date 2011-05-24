@@ -31,14 +31,14 @@ my $test_name= "no such bundle";
 my $err= exception { HTML::EntityReference::ordinal('CapitalDifferentialD', ':fooXX') } ;
 ok (defined $err, $test_name);
 like ($err, qr/:fooXX/, "$test_name - mentions cause of error");
-like ($err, qr/at t\/tests\.t/, "$test_name - carps correctly");
+like ($err, qr/at t[\\\/]tests\.t/, "$test_name - carps correctly");
 
 
 $test_name= "no such table";
 $err= exception { HTML::EntityReference::ordinal('nosuchFoo', [ qw/HTML4 HTMLL5/ ] ) } ;
 ok (defined $err, $test_name);
 like ($err, qr/HTMLL5/, "$test_name - mentions cause of error");
-like ($err, qr/at t\/tests\.t/, "$test_name - carps correctly");
+like ($err, qr/at t[\\\/]tests\.t/, "$test_name - carps correctly");
 
 
 
